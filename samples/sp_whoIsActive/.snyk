@@ -1,0 +1,44 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:extend:20180424':
+    - vscode > request > extend:
+        patched: '2022-08-18T16:40:01.139Z'
+    - gulp > gulp-cli > liftoff > extend:
+        patched: '2022-08-18T16:40:01.139Z'
+    - gulp > vinyl-fs > glob-stream > extend:
+        patched: '2022-08-18T16:40:01.139Z'
+    - gulp-typescript > vinyl-fs > glob-stream > extend:
+        patched: '2022-08-18T16:40:01.139Z'
+    - vscode > gulp-remote-src > request > extend:
+        patched: '2022-08-18T16:40:01.139Z'
+    - vscode > gulp-symdest > vinyl-fs > glob-stream > extend:
+        patched: '2022-08-18T16:40:01.139Z'
+    - vscode > gulp-vinyl-zip > vinyl-fs > glob-stream > extend:
+        patched: '2022-08-18T16:40:01.139Z'
+  'npm:hoek:20180212':
+    - vscode > gulp-remote-src > request > hawk > hoek:
+        patched: '2022-08-18T16:40:01.139Z'
+    - vscode > gulp-remote-src > request > hawk > boom > hoek:
+        patched: '2022-08-18T16:40:01.139Z'
+    - vscode > gulp-remote-src > request > hawk > sntp > hoek:
+        patched: '2022-08-18T16:40:01.139Z'
+    - vscode > gulp-remote-src > request > hawk > cryptiles > boom > hoek:
+        patched: '2022-08-18T16:40:01.139Z'
+  SNYK-JS-LODASH-567746:
+    - typemoq > lodash:
+        patched: '2022-08-18T16:40:01.139Z'
+    - vsce > lodash:
+        patched: '2022-08-18T16:40:01.139Z'
+    - vsce > cheerio > lodash:
+        patched: '2022-08-18T16:40:01.139Z'
+  'npm:stringstream:20180511':
+    - vscode > request > stringstream:
+        patched: '2022-08-18T16:40:01.139Z'
+    - vscode > gulp-remote-src > request > stringstream:
+        patched: '2022-08-18T16:40:01.139Z'
+  'npm:tunnel-agent:20170305':
+    - vscode > gulp-remote-src > request > tunnel-agent:
+        patched: '2022-08-18T16:40:01.139Z'
