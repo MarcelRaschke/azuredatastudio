@@ -15,14 +15,18 @@
   "dependencies": {
     "vscode-extension-telemetry": "0.0.18",
     "vscode-nls": "^3.2.4",
-    "vscode-ripgrep": "^1.0.1"
+    "vscode-ripgrep": "^1.0.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@types/node": "8.0.33",
     "@types/semver": "5.4.0",
-    "vscode": "^1.1.17"
+    "vscode": "^1.1.35"
   },
-  "scripts": {},
+  "scripts": {
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
   "activationEvents": [
     "onSearch:file",
     "*"
@@ -40,5 +44,6 @@
         }
       }
     }
-  }
+  },
+  "snyk": true
 }
