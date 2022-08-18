@@ -1,0 +1,49 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:extend:20180424':
+    - request > extend:
+        patched: '2022-08-18T18:28:55.361Z'
+    - azure-storage > request > extend:
+        patched: '2022-08-18T18:28:55.361Z'
+    - github-releases > request > extend:
+        patched: '2022-08-18T18:28:55.361Z'
+    - vscode > request > extend:
+        patched: '2022-08-18T18:28:55.361Z'
+    - vscode > gulp-remote-src > request > extend:
+        patched: '2022-08-18T18:28:55.361Z'
+    - vscode > gulp-symdest > vinyl-fs > glob-stream > extend:
+        patched: '2022-08-18T18:28:55.361Z'
+    - vscode > gulp-vinyl-zip > vinyl-fs > glob-stream > extend:
+        patched: '2022-08-18T18:28:55.361Z'
+  'npm:hoek:20180212':
+    - github-releases > request > hawk > hoek:
+        patched: '2022-08-18T18:28:55.361Z'
+    - github-releases > request > hawk > boom > hoek:
+        patched: '2022-08-18T18:28:55.361Z'
+    - github-releases > request > hawk > sntp > hoek:
+        patched: '2022-08-18T18:28:55.361Z'
+    - vscode > gulp-remote-src > request > hawk > hoek:
+        patched: '2022-08-18T18:28:55.361Z'
+    - github-releases > request > hawk > cryptiles > boom > hoek:
+        patched: '2022-08-18T18:28:55.361Z'
+    - vscode > gulp-remote-src > request > hawk > boom > hoek:
+        patched: '2022-08-18T18:28:55.361Z'
+    - vscode > gulp-remote-src > request > hawk > sntp > hoek:
+        patched: '2022-08-18T18:28:55.361Z'
+    - vscode > gulp-remote-src > request > hawk > cryptiles > boom > hoek:
+        patched: '2022-08-18T18:28:55.361Z'
+  'npm:stringstream:20180511':
+    - azure-storage > request > stringstream:
+        patched: '2022-08-18T18:28:55.361Z'
+    - github-releases > request > stringstream:
+        patched: '2022-08-18T18:28:55.361Z'
+    - vscode > request > stringstream:
+        patched: '2022-08-18T18:28:55.361Z'
+    - vscode > gulp-remote-src > request > stringstream:
+        patched: '2022-08-18T18:28:55.361Z'
+  'npm:tunnel-agent:20170305':
+    - vscode > gulp-remote-src > request > tunnel-agent:
+        patched: '2022-08-18T18:28:55.361Z'
