@@ -1,0 +1,28 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:extend:20180424':
+    - gulp-watch > chokidar > fsevents > node-pre-gyp > request > extend:
+        patched: '2022-08-18T16:47:30.134Z'
+  'npm:hoek:20180212':
+    - gulp-watch > chokidar > fsevents > node-pre-gyp > hawk > hoek:
+        patched: '2022-08-18T16:47:30.134Z'
+    - gulp-watch > chokidar > fsevents > node-pre-gyp > hawk > boom > hoek:
+        patched: '2022-08-18T16:47:30.134Z'
+    - gulp-watch > chokidar > fsevents > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2022-08-18T16:47:30.134Z'
+    - gulp-watch > chokidar > fsevents > node-pre-gyp > request > hawk > hoek:
+        patched: '2022-08-18T16:47:30.134Z'
+    - gulp-watch > chokidar > fsevents > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2022-08-18T16:47:30.134Z'
+    - gulp-watch > chokidar > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2022-08-18T16:47:30.134Z'
+    - gulp-watch > chokidar > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2022-08-18T16:47:30.134Z'
+    - gulp-watch > chokidar > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2022-08-18T16:47:30.134Z'
+  'npm:stringstream:20180511':
+    - gulp-watch > chokidar > fsevents > node-pre-gyp > request > stringstream:
+        patched: '2022-08-18T16:47:30.134Z'
