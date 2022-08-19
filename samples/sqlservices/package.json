@@ -1,115 +1,119 @@
 {
-    "name": "sqlservices",
-    "displayName": "sqlservices",
-    "description": "Lists SQL Server service status in the management dashboard for a server",
-    "version": "0.0.1",
-    "publisher": "demo",
-    "engines": {
-        "vscode": "^1.26.0",
-        "sqlops": "*"
-    },
-    "categories": [
-        "Other"
+  "name": "sqlservices",
+  "displayName": "sqlservices",
+  "description": "Lists SQL Server service status in the management dashboard for a server",
+  "version": "0.0.1",
+  "publisher": "demo",
+  "engines": {
+    "vscode": "^1.26.0",
+    "sqlops": "*"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "sqlservices.openDialog",
+        "title": "sqlservices.openDialog"
+      },
+      {
+        "command": "sqlservices.openConnectionDialog",
+        "title": "sqlservices.openConnectionDialog"
+      },
+      {
+        "command": "sqlservices.openEditor",
+        "title": "sqlservices.openEditor"
+      },
+      {
+        "command": "sqlservices.openEditorWithWebView",
+        "title": "sqlservices.openEditorWithWebView"
+      },
+      {
+        "command": "sqlservices.openEditorWithWebView2",
+        "title": "sqlservices.openEditorWithWebView2"
+      },
+      {
+        "command": "sqlservices.openWizard",
+        "title": "sqlservices.openWizard"
+      }
     ],
-    "activationEvents": [
-        "*"
-    ],
-    "main": "./out/src/extension",
-    "contributes": {
-        "commands": [
+    "dashboard.tabs": [
+      {
+        "id": "sqlservices.tab",
+        "title": "sqlservices",
+        "icon": {
+          "light": "./out/src/media/insights.svg",
+          "dark": "./out/src/media/insights_inverse.svg"
+        },
+        "description": "Shows available services running in the SQL Server instance",
+        "container": {
+          "nav-section": [
             {
-                "command": "sqlservices.openDialog",
-                "title": "sqlservices.openDialog"
+              "id": "sqlservices",
+              "title": "Services",
+              "gridItemConfig": {
+                "sizex": 2,
+                "sizey": 1
+              },
+              "container": {
+                "modelview-container": null
+              }
             },
             {
-                "command": "sqlservices.openConnectionDialog",
-                "title": "sqlservices.openConnectionDialog"
-            },
-            {
-                "command": "sqlservices.openEditor",
-                "title": "sqlservices.openEditor"
-            },
-            {
-                "command": "sqlservices.openEditorWithWebView",
-                "title": "sqlservices.openEditorWithWebView"
-            },
-            {
-                "command": "sqlservices.openEditorWithWebView2",
-                "title": "sqlservices.openEditorWithWebView2"
-            },
-            {
-                "command": "sqlservices.openWizard",
-                "title": "sqlservices.openWizard"
+              "id": "splitPanel",
+              "title": "SplitPanel",
+              "gridItemConfig": {
+                "sizex": 2,
+                "sizey": 1
+              },
+              "container": {
+                "modelview-container": null
+              }
             }
-        ],
-        "dashboard.tabs": [
-            {
-                "id": "sqlservices.tab",
-                "title": "sqlservices",
-                "icon": {
-                    "light": "./out/src/media/insights.svg",
-                    "dark": "./out/src/media/insights_inverse.svg"
-                },
-                "description": "Shows available services running in the SQL Server instance",
-                "container": {
-                    "nav-section": [
-                        {
-                            "id": "sqlservices",
-                            "title": "Services",
-                            "gridItemConfig": {
-                                "sizex": 2,
-                                "sizey": 1
-                            },
-                            "container": {
-                                "modelview-container": null
-                            }
-                        },
-                        {
-                            "id": "splitPanel",
-                            "title": "SplitPanel",
-                            "gridItemConfig": {
-                                "sizex": 2,
-                                "sizey": 1
-                            },
-                            "container": {
-                                "modelview-container": null
-                            }
-                        }
-                    ]
-                }
-            }
-        ]
-    },
-    "scripts": {
-        "build": "gulp build",
-        "compile": "gulp compile",
-        "watch": "gulp watch",
-        "typings": "gulp copytypings",
-        "postinstall": "node ./node_modules/vscode/bin/install && node ./node_modules/sqlops/bin/install && gulp copytypings"
-    },
-    "dependencies": {
-        "vscode-nls": "^3.2.2",
-        "fs-extra": "^5.0.0",
-        "handlebars": "^4.0.11"
-    },
-    "devDependencies": {
-        "@types/node": "^7.0.43",
-        "child-process-promise": "^2.2.1",
-        "del": "^3.0.0",
-        "gulp": "^4.0.0",
-        "gulp-color": "0.0.1",
-        "gulp-sourcemaps": "^2.6.4",
-        "gulp-tslint": "^6.0.2",
-        "gulp-typescript": "^3.2.4",
-        "sqlops": "github:anthonydresser/sqlops-extension-sqlops",
-        "tslint": "^3.14.0",
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.18",
-        "@types/handlebars": "^4.0.11",
-        "vsce": "1.36.2"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices"
-    }
+          ]
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "build": "gulp build",
+    "compile": "gulp compile",
+    "watch": "gulp watch",
+    "typings": "gulp copytypings",
+    "postinstall": "node ./node_modules/vscode/bin/install && node ./node_modules/sqlops/bin/install && gulp copytypings",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "dependencies": {
+    "vscode-nls": "^3.2.2",
+    "fs-extra": "^5.0.0",
+    "handlebars": "^4.0.11",
+    "@snyk/protect": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.43",
+    "child-process-promise": "^2.2.1",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-color": "0.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-tslint": "^6.0.2",
+    "gulp-typescript": "^3.2.4",
+    "sqlops": "github:anthonydresser/sqlops-extension-sqlops",
+    "tslint": "^3.14.0",
+    "typescript": "^2.6.1",
+    "vscode": "^1.1.35",
+    "@types/handlebars": "^4.0.11",
+    "vsce": "2.6.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices"
+  },
+  "snyk": true
 }
