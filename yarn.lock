@@ -53,9 +53,12 @@
     normalize-path "^2.0.1"
     through2 "^2.0.3"
 
-"@types/chart.js@^2.7.31":
-  version "2.7.31"
-  resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.7.31.tgz#fe2c28d3defa461f5d5cd01f1fac635df649472b"
+"@types/chart.js@^2.9.31":
+  version "2.9.31"
+  resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.9.31.tgz#e8ebc7ed18eb0e5114c69bd46ef8e0037c89d39d"
+  integrity sha512-hzS6phN/kx3jClk3iYqEHNnYIRSi4RZrIGJ8CDLjgatpHoftCezvC44uqB3o3OUm9ftU1m7sHG8+RLyPTlACrA==
+  dependencies:
+    moment "^2.10.2"
 
 "@types/commander@^2.11.0":
   version "2.12.2"
