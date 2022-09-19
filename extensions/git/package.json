@@ -1186,7 +1186,7 @@
   },
   "dependencies": {
     "byline": "^5.0.0",
-    "file-type": "^7.2.0",
+    "file-type": "^16.5.4",
     "iconv-lite": "0.4.19",
     "jschardet": "^1.6.0",
     "vscode-extension-telemetry": "0.0.18",
