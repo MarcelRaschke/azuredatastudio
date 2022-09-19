@@ -1,0 +1,19 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:extend:20180424':
+    - vscode > request > extend:
+        patched: '2022-08-18T23:27:13.718Z'
+    - vscode > gulp-remote-src-vscode > request > extend:
+        patched: '2022-08-18T23:27:13.718Z'
+    - vscode > gulp-symdest > vinyl-fs > glob-stream > extend:
+        patched: '2022-08-18T23:27:13.718Z'
+    - vscode > gulp-vinyl-zip > vinyl-fs > glob-stream > extend:
+        patched: '2022-08-18T23:27:13.718Z'
+  'npm:stringstream:20180511':
+    - vscode > request > stringstream:
+        patched: '2022-08-18T23:27:13.718Z'
+    - vscode > gulp-remote-src-vscode > request > stringstream:
+        patched: '2022-08-18T23:27:13.718Z'
