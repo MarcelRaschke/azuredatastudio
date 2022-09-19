@@ -5,7 +5,15 @@
   "author": "Microsoft ",
   "private": true,
   "devDependencies": {
-    "gulp-watch": "^4.3.9",
+    "gulp-watch": "^5.0.0",
     "nsfw": "^1.0.15"
+  },
+  "scripts": {
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true,
+  "dependencies": {
+    "@snyk/protect": "latest"
   }
 }
