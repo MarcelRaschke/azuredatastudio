@@ -6454,9 +6454,10 @@ slice-ansi@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/slice-ansi/-/slice-ansi-0.0.4.tgz#edbf8903f66f7ce2f8eafd6ceed65e264c831b35"
 
-"slickgrid@github:anthonydresser/SlickGrid#2.3.29":
-  version "2.3.29"
-  resolved "https://codeload.github.com/anthonydresser/SlickGrid/tar.gz/40b88f10d36d35f350838d1a2142c4b790701709"
+slickgrid@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/slickgrid/-/slickgrid-2.4.0.tgz#01b1204fc3338be1b62091b8debacd5e53836c29"
+  integrity sha1-AbEgT8Mzi+G2IJG43rrNXlODbCk=
   dependencies:
     jquery ">=1.8.0"
     jquery-ui ">=1.8.0"
