@@ -80,12 +80,13 @@
     }
   },
   "dependencies": {
-    "vscode-nls": "^3.2.1"
+    "vscode-nls": "^3.2.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@types/mocha": "^5.2.5",
     "@types/node": "^12.11.7",
-    "mocha": "^5.2.0",
+    "mocha": "^10.1.0",
     "mocha-junit-reporter": "^1.17.0",
     "mocha-multi-reporters": "^1.1.7",
     "should": "^13.2.1",
@@ -96,5 +97,10 @@
     "id": "10",
     "publisherDisplayName": "Microsoft",
     "publisherId": "Microsoft"
-  }
+  },
+  "scripts": {
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
